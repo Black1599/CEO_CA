@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<!-- =====================================================================
+     GUÍA DE LECTURA DE BLOG/INDEX.HTML
+     Este archivo muestra el listado de publicaciones del blog.
+     Las tarjetas nuevas se pegan dentro del contenedor blog-post-list.
+     Los comentarios como este no aparecen en la web.
+     ===================================================================== -->
+<html lang="es">
+<!-- =====================================================================
+     MAPA DE REFERENCIAS PARA EL MANUAL
+       HTML-BLOG-HEAD-01       metadatos y CSS
+       HTML-BLOG-HERO-01       título y explicación del blog
+       HTML-BLOG-LIST-01       contenedor de publicaciones
+       HTML-BLOG-CARD-01       tarjeta que se duplica
+       HTML-BLOG-CONTACT-01    panel negro de contacto
+       HTML-BLOG-FOOTER-01     pie
+     ===================================================================== -->
+<head>
+<!-- [REF HTML-BLOG-HEAD-01] METADATOS, SEO, FAVICON Y HOJAS DE ESTILO DEL BLOG. -->
+<!-- CODIFICACIÓN: UTF-8 permite mostrar correctamente acentos y eñes. -->
+<meta charset="utf-8"/>
+<!-- VIEWPORT: adapta la anchura del diseño al móvil. -->
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- FAVICON: icono de pestaña y acceso directo en móviles. -->
+<link href="../assets/images/favicon-ca-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../assets/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="../assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<!-- SEO: el contenido de title aparece en la pestaña y suele usarse en Google. -->
+<title>Blog jurídico | Carandell Advocats</title>
+<meta content="Artículos jurídicos de Carandell Advocats sobre vivienda, sucesiones, derecho laboral y otras cuestiones legales, explicados de forma clara y rigurosa." name="description"/>
+<link href="../css/fonts.css?v=20260822-seov2" rel="stylesheet"/>
+<!-- Los estilos generales mantienen la estética de la web principal. -->
+<link href="../css/home.css?v=20260821-bilingue1" rel="stylesheet"/>
+<!-- Los estilos específicos de esta sección se encuentran aquí. -->
+<link href="../css/blog.css?v=20260822-seov2" rel="stylesheet"/>
+<!-- [REF SEO-AI-META-01] CANONICAL, ROBOTS, OPEN GRAPH Y METADATOS PARA BUSCADORES/IA. --><link href="https://carandelladvocats.com/blog/" rel="canonical"/><link href="../llms.txt" rel="alternate" title="Resumen del sitio para sistemas de IA" type="text/plain"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="Carandell Advocats" name="author"/><meta content="es_ES" property="og:locale"/><meta content="website" property="og:type"/><meta content="Carandell Advocats" property="og:site_name"/><meta content="Blog jurídico | Carandell Advocats" property="og:title"/><meta content="Artículos jurídicos de Carandell Advocats sobre vivienda, sucesiones, derecho laboral y otras cuestiones legales, explicados de forma clara y rigurosa." property="og:description"/><meta content="https://carandelladvocats.com/blog/" property="og:url"/><meta content="https://carandelladvocats.com/assets/images/recepcion.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Blog jurídico | Carandell Advocats" name="twitter:title"/><meta content="Artículos jurídicos de Carandell Advocats sobre vivienda, sucesiones, derecho laboral y otras cuestiones legales, explicados de forma clara y rigurosa." name="twitter:description"/><meta content="https://carandelladvocats.com/assets/images/recepcion.jpg" name="twitter:image"/><!-- [REF SEO-AI-SCHEMA-01] DATOS ESTRUCTURADOS SCHEMA.ORG PARA BUSCADORES E IA. --><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://carandelladvocats.com/blog/#blog",
+      "url": "https://carandelladvocats.com/blog/",
+      "name": "Blog jurídico de Carandell Advocats",
+      "description": "Artículos jurídicos de Carandell Advocats sobre vivienda, sucesiones, derecho laboral y otras cuestiones legales, explicados de forma clara y rigurosa.",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://carandelladvocats.com/#legalservice"
+      },
+      "isPartOf": {
+        "@id": "https://carandelladvocats.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://carandelladvocats.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://carandelladvocats.com/blog/"
+        }
+      ]
+    }
+  ]
+}</script><link href="https://carandelladvocats.com/blog/" hreflang="es" rel="alternate"/><link href="https://carandelladvocats.com/cat/blog/" hreflang="ca" rel="alternate"/><link href="https://carandelladvocats.com/blog/" hreflang="x-default" rel="alternate"/></head>
+<body class="blog-page" id="top"><a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+<!-- [REF HTML-BLOG-BODY-01] INICIO DEL CONTENIDO VISIBLE DEL BLOG. -->
+<!-- [REF HTML-BLOG-HEADER-01] CABECERA COMPARTIDA: menú, logo e idiomas. -->
+<header class="site-header compact shared-site-header" id="siteHeader">
+<div class="header-shell shared-header-shell">
+<!-- Abre y cierra el menú inferior. -->
+<button aria-controls="siteMenu-blog" aria-expanded="false" aria-haspopup="true" aria-label="Abrir menú de navegación" class="site-menu-button" type="button">
+<span aria-hidden="true" class="site-menu-icon"><i></i><i></i></span>
+</button>
+<!-- Desde la portada vuelve exactamente al inicio. -->
+<a aria-label="Carandell Advocats — Inicio" class="brand shared-header-brand" href="../index.html">
+<!-- LOGO VECTORIAL: ../assets/images/logo-carandell-vector.svg. Proviene del archivo original de Illustrator y no pierde nitidez. -->
+<img alt="Carandell Advocats" decoding="async" src="../assets/images/logo-carandell-vector.svg"/>
+</a>
+<!-- Selector ES / CAT: abre la página equivalente en el otro idioma. -->
+<button aria-label="Cambiar idioma a catalán" class="site-language-button" data-language-href="../cat/blog/index.html" title="Cambiar idioma a catalán" type="button">
+<span aria-current="true" data-lang="es">ES</span><b aria-hidden="true">/</b>
+<span data-lang="cat">CAT</span>
+</button>
+<!-- Orden de navegación: Inicio, Blog, Cómo llegar y Contacto. -->
+<nav aria-label="Navegación principal" class="site-menu-panel" id="siteMenu-blog">
+<a data-home-link="" href="../index.html">Inicio</a>
+<a aria-current="page" href="index.html">Blog</a>
+<a href="../index.html#ubicacion">Cómo llegar</a>
+<a data-contact-popup="" href="#contacto">Contacto</a>
+</nav>
+</div>
+</header>
+<!-- CONTENIDO PRINCIPAL DEL BLOG. -->
+<!-- CONTENIDO PRINCIPAL VISIBLE DE LA PÁGINA. -->
+<main id="main-content" tabindex="-1">
+<!-- [REF HTML-BLOG-HERO-01] PORTADA DEL BLOG: título y explicación general. -->
+<section class="blog-hero">
+<div>
+<p class="blog-kicker">Blog jurídico</p>
+<h1>Actualidad jurídica, explicada con claridad.</h1>
+</div>
+</section>
+<!-- [REF HTML-BLOG-LIST-01] LISTADO: las tarjetas se ordenan dentro de .blog-post-list. -->
+<section aria-labelledby="ultimos-articulos" class="blog-list-section">
+<!-- [REF HTML-BLOG-SEARCH-01] BUSCADOR: filtra publicaciones por título, categoría y contenido. -->
+<div class="blog-search-row">
+<form class="blog-search-box" data-blog-search-form="" data-search-language="es" role="search">
+<label for="blog-search-input-es">Buscar en el blog</label>
+<div class="blog-search-control">
+<input aria-describedby="blog-search-status-es" autocomplete="off" data-blog-search-input="" id="blog-search-input-es" inputmode="search" placeholder="Buscar por tema, palabra clave o contenido…" type="search"/>
+<button aria-label="Borrar búsqueda" data-blog-search-clear="" title="Borrar búsqueda" type="button">×</button>
+</div>
+<p aria-live="polite" class="blog-search-status" data-blog-search-status="" id="blog-search-status-es"></p>
+</form>
+</div>
+<div class="blog-section-heading">
+<h2 id="ultimos-articulos">Últimas publicaciones</h2>
+</div>
+<div class="blog-grid"><div class="blog-post-list"><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>INMOBILIARIO</span><time datetime="2026-08-16">16 de agosto de 2026</time></div><h3><a href="que-hacer-antes-de-comprar-vivienda.html">¿Qué debes hacer antes de comprar una vivienda?</a></h3><a class="blog-read-more" href="que-hacer-antes-de-comprar-vivienda.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>INMOBILIARIO</span><time datetime="2026-08-16">16 de agosto de 2026</time></div><h3><a href="no-firmes-arras-sin-asesoramiento.html">No firmes unas arras sin asesoramiento</a></h3><a class="blog-read-more" href="no-firmes-arras-sin-asesoramiento.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>INMOBILIARIO</span><time datetime="2026-08-16">16 de agosto de 2026</time></div><h3><a href="hipoteca-para-comprar-vivienda.html">¿Necesitas una hipoteca para comprar una vivienda?</a></h3><a class="blog-read-more" href="hipoteca-para-comprar-vivienda.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>DERECHO CIVIL Y CONSUMO</span><time datetime="2026-08-16">16 de agosto de 2026</time></div><h3><a href="coche-segunda-mano-averias-ocultas.html">¿Te han vendido un coche de segunda mano con averías ocultas?</a></h3><a class="blog-read-more" href="coche-segunda-mano-averias-ocultas.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>LABORAL</span><time datetime="2026-08-16">16 de agosto de 2026</time></div><h3><a href="despido-estando-de-baja-medica.html">¿Te pueden despedir estando de baja médica?</a></h3><a class="blog-read-more" href="despido-estando-de-baja-medica.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>LABORAL</span><time datetime="2026-08-16">16 de agosto de 2026</time></div><h3><a href="tipos-de-despido-en-cataluna.html">Tipos de despido en Cataluña: diferencias principales.</a></h3><a class="blog-read-more" href="tipos-de-despido-en-cataluna.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>HERENCIAS</span><time datetime="2026-08-16">16 de agosto de 2026</time></div><h3><a href="herencia-con-deudas.html">Herencia con deudas: ¿aceptar, renunciar o aceptar a beneficio de inventario?</a></h3><a class="blog-read-more" href="herencia-con-deudas.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>HERENCIAS</span><time datetime="2026-08-16">16 de agosto de 2026</time></div><h3><a href="requisitos-para-desheredar-en-cataluna.html">¿Cuáles son los requisitos para desheredar a alguien?</a></h3><a class="blog-read-more" href="requisitos-para-desheredar-en-cataluna.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>VIVIENDA Y DERECHO PENAL</span><time datetime="2026-08-15">15 de agosto de 2026</time></div><h3><a href="se-puede-cortar-la-luz-a-un-okupa.html">¿Se puede cortar la luz a un okupa? El Supremo aclara cuándo no es delito.</a></h3><a class="blog-read-more" href="se-puede-cortar-la-luz-a-un-okupa.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>FAMILIA</span><time datetime="2026-08-11">11 de agosto de 2026</time></div><h3><a href="divorcio-o-ruptura-de-pareja-estable.html">Divorcio o ruptura de pareja estable</a></h3><a class="blog-read-more" href="divorcio-o-ruptura-de-pareja-estable.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>FAMILIA</span><time datetime="2026-08-11">11 de agosto de 2026</time></div><h3><a href="mascotas-tras-divorcio-en-cataluna.html">¿Qué ocurre con las mascotas tras el divorcio en Cataluña?</a></h3><a class="blog-read-more" href="mascotas-tras-divorcio-en-cataluna.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>LEGÍTIMA</span><time datetime="2026-08-10">10 de agosto de 2026</time></div><h3><a href="que-es-la-legitima-en-cataluna.html">¿Qué es la legítima?</a></h3><a class="blog-read-more" href="que-es-la-legitima-en-cataluna.html">Leer artículo <span aria-hidden="true">→</span></a></div></article><article class="blog-card"><div class="blog-card-body"><div class="blog-card-meta"><span>HERENCIAS</span><time datetime="2026-08-10">10 de agosto de 2026</time></div><h3><a href="que-hacer-al-recibir-una-herencia-en-cataluna.html">¿Qué hacer al recibir una herencia en Cataluña?</a></h3><a class="blog-read-more" href="que-hacer-al-recibir-una-herencia-en-cataluna.html">Leer artículo <span aria-hidden="true">→</span></a></div></article></div><!-- [REF HTML-BLOG-CONTACT-01] PANEL NEGRO DE CONTACTO. -->
+<aside aria-label="Contacto con el despacho" class="blog-ready-panel">
+<span>¿Tienes una consulta?</span>
+<h3>Estudiamos tu caso de forma personalizada.</h3>
+<p>Cada asunto requiere un análisis individual de los hechos, la documentación y el objetivo que se pretende alcanzar.</p>
+<!-- TELÉFONO: en móvil inicia una llamada; en PC queda desactivado y funciona solo como elemento visual. --><a aria-label="Llamar al 683 176 820" data-copy-phone="+34683176820" href="tel:+34683176820" title="Llamar al 683 176 820">Llamar al 683 176 820</a>
+</aside><!--
+        AÑADIR UNA PUBLICACIÓN NUEVA:
+        1. Copia un <article class="blog-card"> dentro de .blog-post-list.
+        2. Pégalo debajo de la publicación anterior.
+        3. Cambia categoría, fecha, título, resumen y enlace.
+        4. Todas las publicaciones conservarán automáticamente el mismo formato.
+        --></div>
+</section>
+</main>
+<!-- [REF HTML-BLOG-FOOTER-01] PIE DEL BLOG: datos de contacto y enlaces. -->
+<footer class="site-footer site-footer-compact">
+<div class="footer-contact-details" id="contacto">
+<a aria-label="Llamar al 683 176 820" data-copy-phone="+34683176820" href="tel:+34683176820" title="Llamar al 683 176 820"><span>Teléfono</span><strong>683 176 820</strong></a>
+<a aria-label="Enviar un correo electrónico a info@carandelladvocats.com" href="mailto:info@carandelladvocats.com"><span>Correo</span><strong>info@carandelladvocats.com</strong></a>
+</div>
+<div class="footer-legal"><span>© Carandell Advocats</span><span class="footer-legal-links"><a class="footer-legal-link" href="../aviso-legal.html">Aviso legal</a> <span aria-hidden="true">·</span> <a class="footer-legal-link" href="../privacidad.html">Privacidad</a> <span aria-hidden="true">·</span> <a class="footer-legal-link" href="../politica-cookies.html">Cookies</a> <span aria-hidden="true">·</span> <button class="ca-cookie-settings-link" data-cookie-settings="" type="button">Configurar cookies</button></span><a class="footer-blog-link" href="index.html">Blog jurídico</a></div>
+</footer>
+<div aria-label="Contacto rápido" class="mobile-contact-bar blog-mobile-call">
+<a aria-label="Llamar al 683 176 820" data-copy-phone="+34683176820" href="tel:+34683176820" title="Llamar al 683 176 820"><span>Llamar</span><strong>683 176 820</strong></a>
+</div>
+<!-- Comportamiento de la cabecera del blog. -->
+<!-- JAVASCRIPT COMPARTIDO: controla menú, idiomas y desplazamientos. -->
+<script defer="" src="../js/site-header.js?v=20260822-seov2"></script><!-- JAVASCRIPT DEL BLOG: cabecera y barra de llamada móvil. -->
+<script defer="" src="../js/blog-search.js?v=20260821-search1"></script>
+<script defer="" src="../js/blog.js"></script>
+</body>
+</html>
