@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<!-- =====================================================================
+     GUÍA DE LECTURA DE INDEX.HTML
+     HTML define el contenido y la estructura de la página principal.
+     Orden: head, cabecera, contenido principal, pie y JavaScript.
+     Los comentarios como este no aparecen en la web.
+     ===================================================================== -->
+<html lang="es">
+<!-- =====================================================================
+     MAPA DE REFERENCIAS PARA EL MANUAL
+     Busca con Ctrl+F uno de estos códigos:
+       HTML-HOME-HEAD-01       metadatos y CSS
+       HTML-HOME-HEADER-01     menú, logo e idiomas
+       HTML-HOME-TEXT-01       texto principal
+       HTML-HOME-SCHEDULE-01   horario
+       HTML-HOME-OFFICE-01     sección del despacho
+       HTML-HOME-TRUST-01      fotografías, Instagram y reseñas
+       HTML-HOME-LOCATION-01   ubicación
+       HTML-HOME-FOOTER-01     teléfono, correo y enlaces legales
+     ===================================================================== -->
+<head>
+<!-- [REF HTML-HOME-HEAD-01] METADATOS, SEO, FAVICON, FUENTES Y CSS. -->
+<!-- CODIFICACIÓN: UTF-8 permite mostrar correctamente acentos y eñes. -->
+<meta charset="utf-8"/>
+<!-- VIEWPORT: adapta la anchura del diseño al móvil. -->
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<!-- FAVICON: icono de pestaña y buscadores. -->
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/assets/images/favicon-ca-48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/assets/images/favicon-ca-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/assets/images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- SEO: el contenido de title aparece en la pestaña y suele usarse en Google. -->
+<title>Carandell Advocats | Despacho de abogados en El Masnou</title>
+<meta content="Carandell Advocats ofrece asesoramiento legal cercano, profesional y personalizado, adaptado a las necesidades de cada cliente." name="description"/>
+<link href="css/fonts.css" rel="stylesheet"/><!-- ESTILOS PRINCIPALES: se encuentran en css/home.css --><link href="css/home.css?v=20260907-location1" rel="stylesheet"/>
+<!-- DATOS ESTRUCTURADOS: ayudan a los buscadores a entender el negocio o el artículo. -->
+<meta content="yes" name="apple-mobile-web-app-capable"/><meta content="default" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><!-- [REF SEO-AI-META-01] CANONICAL, ROBOTS, OPEN GRAPH Y METADATOS PARA BUSCADORES/IA. --><link href="https://carandelladvocats.com/" rel="canonical"/><link href="llms.txt" rel="alternate" title="Resumen del sitio para sistemas de IA" type="text/plain"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="Carandell Advocats" name="author"/><meta content="es_ES" property="og:locale"/><meta content="website" property="og:type"/><meta content="Carandell Advocats" property="og:site_name"/><meta content="Carandell Advocats | Despacho de abogados en El Masnou" property="og:title"/><meta content="Carandell Advocats ofrece asesoramiento legal cercano, profesional y personalizado, adaptado a las necesidades de cada cliente." property="og:description"/><meta content="https://carandelladvocats.com/" property="og:url"/><meta content="https://carandelladvocats.com/assets/images/recepcion.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Carandell Advocats | Despacho de abogados en El Masnou" name="twitter:title"/><meta content="Carandell Advocats ofrece asesoramiento legal cercano, profesional y personalizado, adaptado a las necesidades de cada cliente." name="twitter:description"/><meta content="https://carandelladvocats.com/assets/images/recepcion.jpg" name="twitter:image"/><!-- [REF SEO-AI-SCHEMA-01] DATOS ESTRUCTURADOS SCHEMA.ORG PARA BUSCADORES E IA. --><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LegalService",
+      "@id": "https://carandelladvocats.com/#legalservice",
+      "name": "Carandell Advocats",
+      "url": "https://carandelladvocats.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://carandelladvocats.com/assets/images/logo-carandell-vector.svg"
+      },
+      "image": "https://carandelladvocats.com/assets/images/recepcion.jpg",
+      "description": "Despacho de abogados en El Masnou con asesoramiento legal cercano, profesional y personalizado.",
+      "telephone": "+34683176820",
+      "email": "info@carandelladvocats.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrer Fontanills, 41, Local 1",
+        "postalCode": "08320",
+        "addressLocality": "El Masnou",
+        "addressRegion": "Barcelona",
+        "addressCountry": "ES"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "El Masnou"
+        },
+        {
+          "@type": "City",
+          "name": "Mataró"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Maresme"
+        },
+        {
+          "@type": "City",
+          "name": "Barcelona"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Cataluña"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "10:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "16:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "10:00",
+          "closes": "13:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/carandell.advocats/"
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Carandell+Advocats%2C+Carrer+Fontanills+41%2C+08320+El+Masnou%2C+Barcelona",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34683176820",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "Spanish",
+          "Catalan"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://carandelladvocats.com/#website",
+      "url": "https://carandelladvocats.com/",
+      "name": "Carandell Advocats",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://carandelladvocats.com/#legalservice"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://carandelladvocats.com/#webpage",
+      "url": "https://carandelladvocats.com/",
+      "name": "Carandell Advocats | Despacho de abogados en El Masnou",
+      "description": "Carandell Advocats ofrece asesoramiento legal cercano, profesional y personalizado, adaptado a las necesidades de cada cliente.",
+      "isPartOf": {
+        "@id": "https://carandelladvocats.com/#website"
+      },
+      "about": {
+        "@id": "https://carandelladvocats.com/#legalservice"
+      },
+      "inLanguage": "es"
+    }
+  ]
+}</script><link href="https://carandelladvocats.com/" hreflang="es" rel="alternate"/><link href="https://carandelladvocats.com/cat/" hreflang="ca" rel="alternate"/><link href="https://carandelladvocats.com/" hreflang="x-default" rel="alternate"/></head>
+<body id="top"><a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+<!-- [REF HTML-HOME-BODY-01] INICIO DEL CONTENIDO VISIBLE. -->
+<!-- [REF HTML-HOME-HEADER-01] CABECERA: menú, logo e idiomas. --><header class="site-header compact shared-site-header" id="siteHeader">
+<div class="header-shell shared-header-shell">
+<!-- Abre y cierra el menú inferior. -->
+<button aria-controls="siteMenu-home" aria-expanded="false" aria-haspopup="true" aria-label="Abrir menú de navegación" class="site-menu-button" type="button">
+<span aria-hidden="true" class="site-menu-icon"><i></i><i></i></span>
+</button>
+<!-- Desde la portada vuelve exactamente al inicio. -->
+<a aria-label="Carandell Advocats — Inicio" class="brand shared-header-brand" href="#top">
+<!-- LOGO VECTORIAL: assets/images/logo-carandell-vector.svg. Proviene del archivo original de Illustrator y no pierde nitidez. -->
+<img alt="Carandell Advocats" decoding="async" src="assets/images/logo-carandell-vector.svg"/>
+</a>
+<!-- Selector ES / CAT: abre la página equivalente en el otro idioma. -->
+<button aria-label="Cambiar idioma a catalán" class="site-language-button" data-language-href="cat/index.html" title="Cambiar idioma a catalán" type="button">
+<span aria-current="true" data-lang="es">ES</span><b aria-hidden="true">/</b>
+<span data-lang="cat">CAT</span>
+</button>
+<!-- Orden de navegación: Inicio, Blog, Cómo llegar y Contacto. -->
+<nav aria-label="Navegación principal" class="site-menu-panel" id="siteMenu-home">
+<a aria-current="page" data-home-link="" href="#top">Inicio</a>
+<a href="blog/index.html">Blog</a>
+<a href="#ubicacion">Cómo llegar</a>
+<a data-contact-popup="" href="#contacto">Contacto</a>
+</nav>
+</div>
+</header>
+<main id="main-content" tabindex="-1">
+<!-- [REF HTML-HOME-HERO-01] PORTADA: texto principal, llamada, horario y fotografía. --><section class="hero hero-info" id="inicio"><span class="anchor-target" id="despacho"></span>
+<div class="hero-copy reveal">
+<p class="eyebrow">Carandell Advocats</p>
+<!-- [REF HTML-HOME-TEXT-01] TEXTO PRINCIPAL: cambia solo el texto entre <h1> y </h1>. -->
+<h1>Carandell Advocats es un despacho de abogados que brinda servicios de asesoramiento legal con un enfoque cercano, profesional y comprometido.<span aria-hidden="true" class="hero-intro-break"></span> Nos distinguimos por ofrecer soluciones jurídicas personalizadas, adaptadas a las necesidades específicas de cada cliente, con la máxima dedicación y rigor.</h1>
+<!-- TELÉFONO: en móvil inicia una llamada; en PC queda desactivado y funciona solo como elemento visual. -->
+<div class="hero-actions" id="heroContactActions">
+<a aria-label="Llamar al 683 176 820" class="button button-primary hero-call-card" data-copy-phone="+34683176820" href="tel:+34683176820" title="Llamar al 683 176 820"><span class="hero-call-card-heading"><span>TELÉFONO</span><i aria-hidden="true"></i></span><strong class="hero-call-card-number">683 176 820</strong></a>
+</div><!-- [REF HTML-HOME-SCHEDULE-01] HORARIO: cambia días y horas, pero conserva las etiquetas y clases. -->
+<div aria-label="Horario de oficina." class="hero-schedule hero-schedule-desktop">
+<div class="schedule-desktop-heading">
+<span>Horario de oficina</span>
+<i aria-hidden="true"></i>
+</div>
+<div class="schedule-desktop-content">
+<div class="schedule-desktop-row">
+<span class="schedule-desktop-day">Lunes a jueves</span>
+<div class="schedule-desktop-times"><span class="schedule-desktop-hour">10:00–13:00</span><span aria-hidden="true" class="schedule-desktop-dot">·</span><span class="schedule-desktop-hour">16:00–18:00</span></div>
+</div>
+<div class="schedule-desktop-row">
+<span class="schedule-desktop-day">Viernes</span>
+<div class="schedule-desktop-times"><span class="schedule-desktop-hour">10:00–13:00</span></div>
+</div>
+</div>
+</div>
+<div class="desktop-hero-rule desktop-only">Atención personal · Rigor jurídico · Cita previa</div></div>
+<div aria-label="Recepción de Carandell Advocats" class="desktop-hero-photo desktop-only">
+<!-- IMAGEN: assets/images/recepcion.jpg. Para sustituirla, guarda la nueva imagen en la misma carpeta y cambia el valor de src. -->
+<img alt="Recepción de Carandell Advocats en El Masnou" height="1152" loading="eager" src="assets/images/recepcion.jpg" width="1536"/><div class="desktop-photo-caption"><span>Carandell Advocats</span><strong>El Masnou</strong></div></div></section><!-- [REF HTML-HOME-OFFICE-01] BLOQUE DEL DESPACHO: imagen, título y descripción. --><section aria-label="El despacho" class="desktop-office-section desktop-only reveal">
+<div class="desktop-office-image">
+<!-- IMAGEN: assets/images/sala-reuniones.jpg. Para sustituirla, guarda la nueva imagen en la misma carpeta y cambia el valor de src. -->
+<img alt="Sala de reuniones de Carandell Advocats" height="1152" loading="lazy" src="assets/images/sala-reuniones.jpg" width="1536"/>
+</div>
+<div class="desktop-office-copy">
+<p class="eyebrow">El despacho</p>
+<h2>Un espacio para tratar cada asunto con atención.</h2>
+<p>Carandell Advocats ofrece un asesoramiento jurídico directo, claro y personalizado, con una relación cercana entre abogado-cliente.</p>
+<div class="desktop-office-meta">
+<span>Atención con cita previa</span>
+</div>
+</div>
+</section><!-- [REF HTML-HOME-TRUST-01] BLOQUE DE CONFIANZA: Maria, Instagram y reseñas. --><section aria-label="Maria Carandell, Instagram y reseñas" class="desktop-trust-section reveal" id="resenas"><div class="desktop-trust-left"><section aria-label="Maria Carandell" class="portrait-section reveal">
+<!-- [REF HTML-HOME-MARIA-01] CARRUSEL PC: fotografía y formación de Maria Carandell. -->
+<div aria-label="Maria Carandell: fotografía y formación" aria-roledescription="carrusel" class="maria-profile-carousel maria-profile-carousel-desktop" data-maria-profile-carousel="desktop" id="desktopMariaProfileCarousel" role="region">
+<div aria-live="polite" class="maria-profile-track">
+<figure aria-label="Fotografía de Maria Carandell" class="maria-profile-slide maria-profile-photo is-active" data-maria-profile-slide="0">
+<img alt="Maria Carandell en Carandell Advocats" height="1536" loading="lazy" src="assets/images/maria-carandell.jpg" width="1466"/>
+<figcaption><strong>Maria Carandell</strong><span>Abogada · Carandell Advocats</span></figcaption>
+</figure>
+<article aria-label="Formación y experiencia de Maria Carandell" class="maria-profile-slide maria-profile-card" data-maria-profile-slide="1">
+<div class="maria-profile-card-inner">
+<span class="maria-profile-eyebrow">Formación y experiencia</span>
+<h3>Maria Carandell</h3>
+<p class="maria-profile-role"><strong>Abogada y fundadora de Carandell Advocats</strong></p>
+<div aria-hidden="true" class="maria-profile-rule"></div>
+<p>Graduada en Derecho por ESADE, completó su formación en la misma institución con el Máster Universitario en Abogacía y el Máster en Derecho Penal Económico y Corporate Compliance.</p>
+<p>Cuenta con formación y experiencia en Derecho Inmobiliario, así como con una sólida trayectoria como abogada de empresa en asuntos civiles, mercantiles y laborales. Esta visión multidisciplinar le permite ofrecer un asesoramiento jurídico cercano, riguroso y estratégico, adaptado a las necesidades de cada cliente.</p>
+</div>
+</article>
+</div>
+<button aria-label="Anterior" class="maria-profile-arrow maria-profile-prev" type="button">‹</button>
+<button aria-label="Siguiente" class="maria-profile-arrow maria-profile-next" type="button">›</button>
+<div aria-label="Seleccionar contenido" class="maria-profile-dots"><button aria-label="Mostrar fotografía de Maria Carandell" class="is-active" data-maria-profile-dot="0" type="button"></button><button aria-label="Mostrar formación de Maria Carandell" data-maria-profile-dot="1" type="button"></button></div>
+</div>
+<!-- [REF HTML-HOME-OFFICE-CAROUSEL-01] CARRUSEL MÓVIL: fotografías del despacho, sin la fotografía de Maria. -->
+<div aria-label="Fotografías del despacho" aria-roledescription="carrusel" class="mobile-office-carousel" id="mobileOfficeCarousel" role="region"><div aria-live="polite" class="mobile-office-track"><figure class="mobile-office-slide mobile-slide-sofa is-active" data-mobile-office-slide="0">
+<img alt="Zona de espera de Carandell Advocats" height="1536" loading="eager" src="assets/images/zona-espera.jpg" width="1152"/><figcaption><strong>Zona de espera</strong><span>Carandell Advocats</span></figcaption></figure><figure class="mobile-office-slide mobile-slide-meeting" data-mobile-office-slide="1">
+<img alt="Sala de reuniones de Carandell Advocats" height="1152" loading="lazy" src="assets/images/sala-reuniones.jpg" width="1536"/><figcaption><strong>Sala de reuniones</strong><span>Atención con cita previa</span></figcaption></figure><figure class="mobile-office-slide mobile-slide-entrance" data-mobile-office-slide="2">
+<img alt="Recepción y entrada de Carandell Advocats" height="1152" loading="lazy" src="assets/images/recepcion.jpg" width="1536"/><figcaption><strong>Recepción</strong><span>El Masnou</span></figcaption></figure></div><button aria-label="Fotografía anterior" class="mobile-office-arrow mobile-office-prev" type="button">‹</button><button aria-label="Fotografía siguiente" class="mobile-office-arrow mobile-office-next" type="button">›</button><div aria-label="Seleccionar fotografía" class="mobile-office-dots"><button aria-label="Mostrar fotografía 1" class="is-active" data-mobile-office-dot="0" type="button"></button><button aria-label="Mostrar fotografía 2" data-mobile-office-dot="1" type="button"></button><button aria-label="Mostrar fotografía 3" data-mobile-office-dot="2" type="button"></button></div></div>
+<div class="mobile-contact-schedule"><div aria-label="Horario de oficina." class="hero-schedule">
+<div class="hero-schedule-heading">
+<span>Horario de oficina</span>
+<i aria-hidden="true"></i>
+</div>
+<div class="hero-schedule-content"><div class="schedule-row"><span>Lunes a jueves</span><strong class="schedule-hours-two-lines">10:00–13:00<br/>16:00–18:00</strong></div><div class="schedule-row"><span>Viernes</span><strong>10:00–13:00</strong></div></div>
+</div><div class="hero-actions mobile-section-actions" id="mobileContactActions">
+<a aria-label="Llamar al 683 176 820" class="button button-primary" data-copy-phone="+34683176820" href="tel:+34683176820" title="Llamar al 683 176 820">Llamar al 683 176 820</a>
+</div></div>
+<!-- [REF HTML-HOME-MARIA-MOBILE-01] CARRUSEL MÓVIL INDEPENDIENTE: Maria y su formación, situado tras el horario. -->
+<div aria-label="Maria Carandell: fotografía y formación" aria-roledescription="carrusel" class="maria-profile-carousel maria-profile-carousel-mobile" data-maria-profile-carousel="mobile" id="mobileMariaProfileCarousel" role="region">
+<div aria-live="polite" class="maria-profile-track">
+<figure aria-label="Fotografía de Maria Carandell" class="maria-profile-slide maria-profile-photo is-active" data-maria-profile-slide="0">
+<img alt="Maria Carandell en Carandell Advocats" height="1536" loading="lazy" src="assets/images/maria-carandell.jpg" width="1466"/>
+<figcaption><strong>Maria Carandell</strong><span>Abogada · Carandell Advocats</span></figcaption>
+</figure>
+<article aria-label="Formación y experiencia de Maria Carandell" class="maria-profile-slide maria-profile-card" data-maria-profile-slide="1">
+<div class="maria-profile-card-inner">
+<span class="maria-profile-eyebrow">Formación y experiencia</span>
+<h3>Maria Carandell</h3>
+<p class="maria-profile-role"><strong>Abogada y fundadora de Carandell Advocats</strong></p>
+<div aria-hidden="true" class="maria-profile-rule"></div>
+<p>Graduada en Derecho por ESADE, completó su formación en la misma institución con el Máster Universitario en Abogacía y el Máster en Derecho Penal Económico y Corporate Compliance.</p>
+<p>Cuenta con formación y experiencia en Derecho Inmobiliario, así como con una sólida trayectoria como abogada de empresa en asuntos civiles, mercantiles y laborales. Esta visión multidisciplinar le permite ofrecer un asesoramiento jurídico cercano, riguroso y estratégico, adaptado a las necesidades de cada cliente.</p>
+</div>
+</article>
+</div>
+<button aria-label="Anterior" class="maria-profile-arrow maria-profile-prev" type="button">‹</button>
+<button aria-label="Siguiente" class="maria-profile-arrow maria-profile-next" type="button">›</button>
+<div aria-label="Seleccionar contenido" class="maria-profile-dots"><button aria-label="Mostrar fotografía de Maria Carandell" class="is-active" data-maria-profile-dot="0" type="button"></button><button aria-label="Mostrar formación de Maria Carandell" data-maria-profile-dot="1" type="button"></button></div>
+</div>
+</section></div><div class="desktop-trust-right"><section class="social-section reveal" id="instagram">
+<!-- [REF HTML-HOME-INSTAGRAM-01] INSTAGRAM: tarjeta negra, icono recto y enlace al perfil. --><a aria-label="Abrir el perfil de Instagram de Carandell Advocats (se abre en una nueva pestaña)" class="instagram-profile-card" href="https://www.instagram.com/carandell.advocats/" rel="noopener" target="_blank">
+<div aria-hidden="true" class="instagram-symbol">
+<svg viewbox="0 0 24 24">
+<rect height="18" rx="5" width="18" x="3" y="3"></rect>
+<circle cx="12" cy="12" r="4.2"></circle>
+<circle cx="17.4" cy="6.7" r="1"></circle>
+</svg>
+</div>
+<div class="instagram-profile-copy">
+<span>Instagram</span>
+<strong>@carandell.advocats</strong>
+</div>
+<div class="instagram-profile-action"><span>Ver perfil</span><b aria-hidden="true">↗</b></div>
+</a>
+</section><article class="review-card"><div class="review-top google-review-summary">
+<div class="google-summary-copy">
+<div aria-label="Google" class="google-wordmark">
+<span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+</div>
+<div class="google-rating-line">
+<strong>5,0</strong>
+<span aria-label="5 de 5 estrellas" class="google-stars">★★★★★</span>
+</div>
+<small>Reseñas publicadas en Google</small>
+</div>
+<a aria-label="Abrir la ubicación de Carandell Advocats en Google Maps (se abre en una nueva pestaña)" class="text-link google-reviews-link" href="https://www.google.com/maps/search/?api=1&amp;query=Carandell+Advocats%2C+Carrer+Fontanills+41%2C+08320+El+Masnou%2C+Barcelona" rel="noopener" target="_blank">
+        Ver reseñas en Google <span aria-hidden="true">↗</span>
+</a>
+</div>
+<div aria-label="Reseñas destacadas" aria-live="polite" aria-roledescription="carrusel" class="review-track google-review-track" role="region">
+<article aria-label="Reseña 1 de 6" class="review-slide google-review-slide active">
+<header class="google-review-header">
+<div aria-hidden="true" class="review-avatar avatar-one">RC</div>
+<div class="review-author">
+<strong>R.C.</strong>
+</div>
+<div aria-label="Publicada en Google" class="google-source-mark">
+<span class="g-blue">G</span>
+</div>
+</header>
+<div class="google-review-rating">
+<span aria-label="5 de 5 estrellas" class="google-stars">★★★★★</span>
+</div>
+<p>Un despacho de abogados moderno, sincero y muy profesional nohay palabras para expresar mi más profundo y sincero agradecimiento por la excelente representación legal y trato recibido.</p>
+</article>
+<article aria-label="Reseña 2 de 6" class="review-slide google-review-slide">
+<header class="google-review-header">
+<div aria-hidden="true" class="review-avatar avatar-two">M</div>
+<div class="review-author">
+<strong>M.</strong>
+</div>
+<div aria-label="Publicada en Google" class="google-source-mark">
+<span class="g-blue">G</span>
+</div>
+</header>
+<div class="google-review-rating">
+<span aria-label="5 de 5 estrellas" class="google-stars">★★★★★</span>
+</div>
+<p>Excelente trato y profesionalidad. Gracias!</p>
+</article>
+<article aria-label="Reseña 3 de 6" class="review-slide google-review-slide">
+<header class="google-review-header">
+<div aria-hidden="true" class="review-avatar avatar-three">JH</div>
+<div class="review-author">
+<strong>J.H.</strong>
+</div>
+<div aria-label="Publicada en Google" class="google-source-mark">
+<span class="g-blue">G</span>
+</div>
+</header>
+<div class="google-review-rating">
+<span aria-label="5 de 5 estrellas" class="google-stars">★★★★★</span>
+</div>
+<p>Un servicio serio, ducado, fiable y constante em su trabajo. Empatia total y seguridad aportada. No lo dudes, si necesitais un buen y correcto servicio jurídico, aqui lo teneis.</p>
+</article>
+<article aria-label="Reseña 4 de 6" class="review-slide google-review-slide">
+<header class="google-review-header">
+<div aria-hidden="true" class="review-avatar avatar-four">CJ</div>
+<div class="review-author">
+<strong>C.J.</strong>
+</div>
+<div aria-label="Publicada en Google" class="google-source-mark">
+<span class="g-blue">G</span>
+</div>
+</header>
+<div class="google-review-rating">
+<span aria-label="5 de 5 estrellas" class="google-stars">★★★★★</span>
+</div>
+<p>La Maria es muy competente, cercana y profesional. Muy contentos de haber contratado tus servicios, todo un acierto!</p>
+</article>
+<article aria-label="Reseña 5 de 6" class="review-slide google-review-slide">
+<header class="google-review-header">
+<div aria-hidden="true" class="review-avatar avatar-five">ER</div>
+<div class="review-author">
+<strong>E.R.</strong>
+</div>
+<div aria-label="Publicada en Google" class="google-source-mark">
+<span class="g-blue">G</span>
+</div>
+</header>
+<div class="google-review-rating">
+<span aria-label="5 de 5 estrellas" class="google-stars">★★★★★</span>
+</div>
+<p>Muy profesionales, ágiles, respetuosos, para resolver cualquier problema legal.</p>
+</article>
+<article aria-label="Reseña 6 de 6" class="review-slide google-review-slide">
+<header class="google-review-header">
+<div aria-hidden="true" class="review-avatar avatar-six">NM</div>
+<div class="review-author">
+<strong>N.M</strong>
+</div>
+<div aria-label="Publicada en Google" class="google-source-mark">
+<span class="g-blue">G</span>
+</div>
+</header>
+<div class="google-review-rating">
+<span aria-label="5 de 5 estrellas" class="google-stars">★★★★★</span>
+</div>
+<p>Muy satisfecho con el despacho de Maria. Destacan por su profesionalidad, empatía y trato personal. Totalmente recomendable.</p>
+</article>
+</div>
+<div class="review-controls google-review-controls">
+<button aria-label="Reseña anterior" id="prevReview" type="button">←</button>
+<div class="review-dots" id="reviewDots"></div>
+<button aria-label="Reseña siguiente" id="nextReview" type="button">→</button>
+</div></article></div></section>
+<!-- BLOQUE FOTOGRÁFICO DE PC: zona de espera. Su visibilidad depende del diseño actual. -->
+<section aria-label="Zona de espera del despacho" class="desktop-lounge-section desktop-only reveal">
+<div class="desktop-lounge-copy">
+<p class="eyebrow">Atención cercana</p>
+<h2>Un entorno cuidado, discreto y profesional.</h2>
+</div>
+<div class="desktop-lounge-image">
+<!-- IMAGEN: assets/images/zona-espera.jpg. Para sustituirla, guarda la nueva imagen en la misma carpeta y cambia el valor de src. -->
+<img alt="Zona de espera de Carandell Advocats" height="1536" loading="lazy" src="assets/images/zona-espera.jpg" width="1152"/>
+</div>
+</section>
+<!-- [REF HTML-HOME-LOCATION-01] UBICACIÓN: mapa externo, dirección y enlace a Google Maps. -->
+<!-- UBICACIÓN: el id="ubicacion" permite que el menú salte hasta aquí. -->
+<section class="location-section reveal" id="ubicacion">
+<div class="location-heading">
+<div><p class="eyebrow">Cómo llegar</p></div>
+</div>
+<div class="location-card">
+<div aria-hidden="false" aria-label="Fachada de Carandell Advocats" class="location-map-visual real-facade-photo" style="background-image:url('assets/images/fachada.jpg')"><!-- MAPA DE GOOGLE: se consulta solo la dirección para mostrar la ubicación sin cargar la ficha comercial ni sus reseñas. --><iframe allowfullscreen="" class="desktop-map-embed is-consent-blocked" data-consent-service="google-maps" data-consent-src="https://www.google.com/maps?q=Carrer%20Fontanills%2041%2C%2008320%20El%20Masnou%2C%20Barcelona&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Carandell Advocats en El Masnou"></iframe>
+<div aria-hidden="true" class="location-pattern"></div><div aria-hidden="true" class="location-frame"></div><div class="location-pin"></div></div>
+<div class="location-copy">
+<div>
+<!-- LOGO VECTORIAL: assets/images/logo-carandell-vector.svg. Proviene del archivo original de Illustrator y no pierde nitidez. -->
+<img alt="Carandell Advocats" class="location-logo-image" decoding="async" src="assets/images/logo-carandell-vector.svg"/><strong class="location-text-title">Carandell Advocats</strong><p>Carrer Fontanills, 41, Local 1<br/>08320 El Masnou, Barcelona</p></div>
+<a aria-label="Abrir Carandell Advocats en Google Maps (se abre en una nueva pestaña)" class="location-open-link" href="https://www.google.com/maps/search/?api=1&amp;query=Carandell+Advocats%2C+Carrer+Fontanills+41%2C+08320+El+Masnou%2C+Barcelona" rel="noopener" target="_blank">Abrir en Google Maps ↗</a>
+</div>
+</div>
+</section></main>
+<!-- [REF HTML-HOME-FOOTER-01] PIE: teléfono, correo, blog y textos legales. -->
+<!-- PIE DE PÁGINA: contiene contacto y enlaces legales. -->
+<footer class="site-footer site-footer-compact">
+<div class="footer-contact-details" id="contacto"><a aria-label="Llamar al 683 176 820" data-copy-phone="+34683176820" href="tel:+34683176820" title="Llamar al 683 176 820"><span>Teléfono</span><strong>683 176 820</strong></a><a aria-label="Enviar un correo electrónico a info@carandelladvocats.com" href="mailto:info@carandelladvocats.com"><span>Correo</span><strong>info@carandelladvocats.com</strong></a></div><div class="footer-legal"><span>© Carandell Advocats</span><span class="footer-legal-links"><a class="footer-legal-link" href="aviso-legal.html">Aviso legal</a> <span aria-hidden="true">·</span> <a class="footer-legal-link" href="privacidad.html">Privacidad</a> <span aria-hidden="true">·</span> <a class="footer-legal-link" href="politica-cookies.html">Cookies</a> <span aria-hidden="true">·</span> <button class="ca-cookie-settings-link" data-cookie-settings="" type="button">Configurar cookies</button></span><a class="footer-blog-link" href="blog/index.html">Blog jurídico</a></div>
+</footer>
+<div aria-label="Contacto rápido" class="mobile-contact-bar">
+<a aria-label="Llamar al 683 176 820" data-copy-phone="+34683176820" href="tel:+34683176820" title="Llamar al 683 176 820"><span>Llamar</span><strong>683 176 820</strong></a>
+</div>
+<!-- [REF HTML-HOME-SCRIPTS-01] JAVASCRIPT: se carga al final para que el HTML exista antes de ejecutar funciones. -->
+<!-- JAVASCRIPT COMPARTIDO: controla menú, idiomas y desplazamientos. -->
+<script defer="" src="js/site-header.js?v=20260821-bilingue1"></script><!-- JAVASCRIPT DE PORTADA: carruseles, reseñas y barra de llamada móvil. -->
+<script defer="" src="js/home.js"></script></body>
+</html>

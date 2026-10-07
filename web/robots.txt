@@ -1,0 +1,14 @@
+# [REF SEO-AI-ROBOTS-01] Reglas de rastreo.
+# OAI-SearchBot se permite para que el contenido pueda aparecer en ChatGPT Search.
+User-agent: OAI-SearchBot
+Allow: /
+
+# GPTBot se bloquea por defecto: no es necesario para aparecer en ChatGPT Search.
+User-agent: GPTBot
+Disallow: /
+
+# Resto de buscadores públicos.
+User-agent: *
+Allow: /
+
+Sitemap: https://carandelladvocats.com/sitemap.xml
