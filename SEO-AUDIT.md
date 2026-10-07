@@ -1,5 +1,7 @@
 # Auditoría SEO técnica y local — Carandell Advocats
 
+**Informe histórico de la primera iteración, entregada en 41b7053.** Para la revisión posterior basada en ese commit, consulta [SEO-IMPROVEMENTS.md](SEO-IMPROVEMENTS.md).
+
 Fecha: 7 de octubre de 2026. Rama: `work`. Repositorio: `Black1599/CEO_CA`.
 
 ## Alcance y resultado
