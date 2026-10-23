@@ -5375,18 +5375,16 @@ body.site-contact-dialog-open{
 
 /* =====================================================================
    [REF CSS-PRACTICE-AREAS-01] ÁREAS DE ACTUACIÓN / ÀREES D’ACTUACIÓ
-   Sustituye visualmente el antiguo bloque de sala de reuniones por una
-   sección editorial de servicios. No altera el hero ni las secciones
-   de confianza, ubicación o pie.
+   Diseño editorial ligero: sin apariencia de tabla, separadores dorados
+   mínimos e iconografía lineal propia.
    ===================================================================== */
 .practice-areas-section{
   width:var(--pc-width);
   margin:84px auto 108px;
   padding:68px 64px 54px;
   box-sizing:border-box;
-  background:rgba(255,255,255,.78);
-  border:1px solid rgba(201,170,99,.34);
-  box-shadow:var(--shadow);
+  background:rgba(255,255,255,.72);
+  box-shadow:0 18px 48px rgba(31,27,20,.045);
 }
 
 .practice-areas-header{
@@ -5414,30 +5412,50 @@ body.site-contact-dialog-open{
 .practice-areas-grid{
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:0;
-  margin-top:48px;
-  border-top:1px solid var(--line);
-  border-left:1px solid var(--line);
+  column-gap:42px;
+  row-gap:0;
+  margin-top:52px;
 }
 
 .practice-area-card{
+  position:relative;
   min-width:0;
   min-height:210px;
-  padding:28px 26px 30px;
+  padding:30px 0 34px;
   box-sizing:border-box;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.42);
+  background:transparent;
+  border:0;
 }
 
-.practice-area-card::before{
+.practice-area-card::after{
   content:"";
-  display:block;
-  width:36px;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
   height:1px;
-  margin-bottom:23px;
-  background:var(--gold-dark);
-  opacity:.78;
+  background:linear-gradient(90deg,rgba(185,150,93,.55),rgba(185,150,93,.12) 72%,transparent);
+}
+
+.practice-area-icon{
+  width:34px;
+  height:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:19px;
+  color:var(--gold-dark);
+  opacity:.88;
+}
+
+.practice-area-icon svg{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.55;
+  stroke-linecap:round;
+  stroke-linejoin:round;
 }
 
 .practice-area-card h3{
@@ -5461,9 +5479,9 @@ body.site-contact-dialog-open{
   align-items:center;
   justify-content:space-between;
   gap:28px;
-  margin-top:34px;
+  margin-top:38px;
   padding-top:24px;
-  border-top:1px solid var(--line);
+  border-top:1px solid rgba(185,150,93,.32);
 }
 
 .practice-areas-footer>span{
@@ -5496,7 +5514,7 @@ body.site-contact-dialog-open{
 }
 
 .practice-areas-cta:focus-visible{
-  outline:2px solid rgba(185,150,93,.55);
+  outline:2px solid rgba(185,150,93,.45);
   outline-offset:5px;
 }
 
@@ -5507,6 +5525,7 @@ body.site-contact-dialog-open{
 
   .practice-areas-grid{
     grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:38px;
   }
 
   .practice-area-card{
@@ -5519,7 +5538,8 @@ body.site-contact-dialog-open{
     width:auto;
     margin:44px 18px 64px;
     padding:38px 24px 30px;
-    background:rgba(255,255,255,.88);
+    background:rgba(255,255,255,.82);
+    box-shadow:0 12px 32px rgba(31,27,20,.035);
   }
 
   .practice-areas-header h2{
@@ -5536,15 +5556,18 @@ body.site-contact-dialog-open{
   .practice-areas-grid{
     grid-template-columns:1fr;
     margin-top:32px;
+    column-gap:0;
   }
 
   .practice-area-card{
     min-height:0;
-    padding:24px 22px 25px;
+    padding:26px 0 27px;
   }
 
-  .practice-area-card::before{
-    margin-bottom:18px;
+  .practice-area-icon{
+    width:31px;
+    height:31px;
+    margin-bottom:16px;
   }
 
   .practice-area-card h3{
@@ -5560,7 +5583,7 @@ body.site-contact-dialog-open{
     align-items:flex-start;
     flex-direction:column;
     gap:18px;
-    margin-top:28px;
+    margin-top:30px;
     padding-top:21px;
   }
 
